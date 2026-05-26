@@ -1,6 +1,6 @@
 {
-  "name": "backdoor",
-  "version": "1.0.0",
+  "name": "backdoor-tunnel",
+  "version": "1.0.1",
   "description": "Expose localhost publicly through a secure reverse SSH tunnel",
   "type": "module",
   "main": "./bin/cli.js",

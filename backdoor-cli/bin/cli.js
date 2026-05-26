@@ -12,8 +12,8 @@ import readline from "readline/promises";
 
 const program = new Command();
 
-const AWS_IP = "13.233.230.99";
-const API = "http://13.233.230.99:8080";
+const API = "https://api.backdoor.adityabhatkar.dev";
+const SSH_HOST = "api.backdoor.adityabhatkar.dev";
 const USER = "tunnel";
 
 const CONFIG_DIR = `${process.env.HOME}/.backdoor`;
@@ -154,13 +154,13 @@ async function main(port) {
         "StrictHostKeyChecking=accept-new",
         "-o",
         "PubkeyAuthentication=no",
-        `${USER}@${AWS_IP}`,
+        `${USER}@${SSH_HOST}`,
       ],
       { stdio: "inherit" },
     );
 
     console.log(`
-🌍 ${chalk.bold.green(`http://${tunnelPort}.backdoor.adityabhatkar.dev`)}
+🌍 ${chalk.bold.green(`https://${tunnelPort}.backdoor.adityabhatkar.dev`)}
 📦 Exposing -> localhost:${port}
 
 Press Ctrl+C to stop the tunnel
