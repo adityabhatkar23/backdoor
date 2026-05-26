@@ -34,7 +34,7 @@ passport.use(
     {
       clientID: process.env.GITHUB_CLIENT_ID,
       clientSecret: process.env.GITHUB_CLIENT_SECRET,
-      callbackURL: "http://13.233.230.99:8080/auth/github/callback",
+      callbackURL: "https://api.backdoor.adityabhatkar.dev/auth/github/callback"
     },
     (accessToken, refreshToken, profile, done) => {
       return done(null, profile);
